@@ -1079,6 +1079,13 @@ Services Style
 Portfolio
 --------------------------------------------- 
 */
+.portfolio-item {
+  display: none;
+}
+
+.portfolio-item:nth-child(-n+5) {
+  display: block;
+}
 
 .our-portfolio {
   padding-top: 120px;
