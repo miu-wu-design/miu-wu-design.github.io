@@ -672,11 +672,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid #f9ab7a;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: #f9ab7a;
 }
 
 .portfolio-details .portfolio-info {
@@ -857,11 +857,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #149ddd;
+  border: 1px solid #f9ab7a;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #149ddd;
+  background-color: #f9ab7a;
 }
 
 /*--------------------------------------------------------------
