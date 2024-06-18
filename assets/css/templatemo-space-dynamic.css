@@ -862,6 +862,50 @@ Banner Style
   height: 290px;
 }
 
+.main-banner-pp:after {
+  content: '';
+  background-image: url(../images/baner-dec-left-pp.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 193px;
+  height: 467px;
+}
+
+.main-banner-pp:before {
+  content: '';
+  background-image: url(../images/baner-dec-right-pp.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 98px;
+  height: 290px;
+}
+
+.main-banner-mobile:after {
+  content: '';
+  background-image: url(../images/baner-dec-left-mobile.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 193px;
+  height: 467px;
+}
+
+.main-banner-mobile:before {
+  content: '';
+  background-image: url(../images/baner-dec-right-mobile.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 98px;
+  height: 290px;
+}
+
 .main-banner-3D:after {
   content: '';
   background-image: url(../images/baner-dec-left-3D.png);
@@ -971,6 +1015,24 @@ About Us Style
 
 .about-us-3D {
   background-image: url(../images/about-bg-3D.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px 0px 0px;
+}
+
+.about-us-pp {
+  background-image: url(../images/about-bg-pp.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px 0px 0px;
+}
+
+.about-us-mobile {
+  background-image: url(../images/about-bg-mobile.png);
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
