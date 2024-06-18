@@ -26,6 +26,32 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap-1.min.css" rel="stylesheet"> <!-- Extra CSS -->
 
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <!-- Optional: Include a library for image zooming -->
+   <style>
+    .modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .zoom-img {
+      transition: transform 0.2s; /* Animation */
+      cursor: zoom-in;
+    }
+    .zoom-img.zoomed {
+      transform: scale(2);
+      cursor: zoom-out;
+    }
+    
+    
+  </style>
+
   <!-- Additional CSS Files --> <!-- Extra CSS -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
@@ -298,143 +324,264 @@
     height: 70vh;
   }
 </style>
-<!-- ======= Desktop Final User web application interface Section ======= -->
-    <section id="portfolio-details" class="portfolio-details" style="margin-top:10vh;">
-      <div class="container" >
-        <div class="gy-4" >
-          <div class="" style="margin: auto;">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/user/0.png" alt="">
-                </div>
+<!-- ======= Admit protal different Screen size verion Section ======= -->
+<section id="portfolio-details" class="portfolio-details" style="margin-top:10vh;">
+  <div class="container">
+    <div class="gy-4">
+      
+      <div class="" style="margin: auto;">
+        <div class="portfolio-description">
+          <h2 style="text-align: center">Admin Portal System</h2>
+          <h6 style="text-align: center">Click to see the full image</h6>
+        </div>
+      </div>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/user/1.png" alt="">
-                </div>
+      <div class="" style="margin: auto;">
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper align-items-center">
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/user/2.png" alt="">
-                </div>
+            <div class="swiper-slide img-fix-size">
+              <img src="assets/img/portfolio/admin-portal/Overall-Admin-Portal.png" alt="" onclick="openModal(this.src, 'Overall Admin Portal')">
+            </div>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/user/3.png" alt="">
-                </div>
+            <div class="swiper-slide img-fix-size">
+              <img src="assets/img/portfolio/admin-portal/1-.png" alt="" onclick="openModal(this.src, 'Log In')">
+            </div>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/user/4.png" alt="">
-                </div>
+            <div class="swiper-slide img-fix-size">
+              <img src="assets/img/portfolio/admin-portal/2-.png" alt="" onclick="openModal(this.src, 'Dashboard')">
+            </div>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/user/5.png" alt="">
-                </div>
+            <div class="swiper-slide img-fix-size">
+              <img src="assets/img/portfolio/admin-portal/3-.png" alt="" onclick="openModal(this.src, 'User Mangement/ Application Management')">
+            </div>
 
+            <div class="swiper-slide img-fix-size">
+              <img src="assets/img/portfolio/admin-portal/4-.png" alt="" onclick="openModal(this.src, 'Application Template')">
+            </div>
+
+            <div class="swiper-slide img-fix-size">
+              <img src="assets/img/portfolio/admin-portal/5-.png" alt="" onclick="openModal(this.src, 'Modification History')">
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+      <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+    </div>
+    <div class="modal-body">
+      <img id="modalImage" src="" alt="Image" class="img-fluid zoom-img">
+    </div>
+  </div>
+</div>
+</div>
+
+
+    <!-- ======= Desktop Final User web application interface Section ======= -->
+  <section id="portfolio-details" class="portfolio-details" style="margin-top:10vh;">
+    <div class="container">
+      <div class="gy-4">
+        
+        <div class="" style="margin: auto;">
+          <div class="portfolio-description">
+            <h2 style="text-align: center">User Portal - Desktop Version</h2>
+            <h6 style="text-align: center">Click to see the full image</h6>
+          </div>
+        </div>
+
+        <div class="" style="margin: auto;">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/Overall-User-Portal.png" alt="" onclick="openModal(this.src, 'Overall User Portal Pages')">
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
 
-          <div class="" style="margin: auto;">
-            <div class="portfolio-description">
-              <h2 style="text-align: center">Desktop Final User web application interface</h2>
-            </div>
-          </div>
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/1-.png" alt="" onclick="openModal(this.src, 'Log In/ Sign Up')">
+              </div>
 
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/2-.png" alt="" onclick="openModal(this.src, 'Application Dashboard')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/3-.png" alt="" onclick="openModal(this.src, 'Application')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/4-.png" alt="" onclick="openModal(this.src, 'Upload Document')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/5-.png" alt="" onclick="openModal(this.src, 'Application Form')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/6-.png" alt="" onclick="openModal(this.src, 'Application Letter')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/7-.png" alt="" onclick="openModal(this.src, 'Review & Payment')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/8-.png" alt="" onclick="openModal(this.src, 'Payment')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/9-.png" alt="" onclick="openModal(this.src, 'Review')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/10-.png" alt="" onclick="openModal(this.src,'Application Letter & Review Documents After Payment')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/11-.png" alt="" onclick="openModal(this.src, 'Support Page')">
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
 
       </div>
-    </section><!-- End of Desktop Final User web application interface -->
 
-    <!-- ======= Mobile Final User web application interface Section ======= -->
-    <!-- <section id="portfolio-details" class="portfolio-details" style="margin-top:0vh;">
-      <div class="container" >
-        <div class="gy-4" >
-          <div class="" style="margin: auto;">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/mobile/1.png" alt="">
-                </div>
+    </div>
+  </section>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/mobile/2.png" alt="">
-                </div>
+ <!-- Modal Structure -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="Image" class="img-fluid zoom-img">
+      </div>
+    </div>
+  </div>
+</div>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/mobile/3.png" alt="">
-                </div>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/mobile/4.png" alt="">
-                </div>
+<!-- ======= User protal different Screen size verion Section ======= -->
+   <section id="portfolio-details" class="portfolio-details" style="margin-top:10vh;">
+    <div class="container">
+      <div class="gy-4">
+        
+        <div class="" style="margin: auto;">
+          <div class="portfolio-description">
+            <h2 style="text-align: center">User Portal - Desktop, Table & Moble Version</h2>
+            <h6 style="text-align: center">Click to see the full image</h6>
+          </div>
+        </div>
 
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/mobile/5.png" alt="">
-                </div>
+        <div class="" style="margin: auto;">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
 
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/1-.png" alt="" onclick="openModal(this.src, 'Log In/ Sign Up')">
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
 
-          <div class="" style="margin: auto;">
-            <div class="portfolio-description">
-              <h2 style="text-align: center">Mobile Final User web application interface</h2>
-            </div>
-          </div>
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/2-.png" alt="" onclick="openModal(this.src, 'Application Dashboard')">
+              </div>
 
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/3-.png" alt="" onclick="openModal(this.src, 'Application')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/4-.png" alt="" onclick="openModal(this.src, 'Upload Document')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/5-.png" alt="" onclick="openModal(this.src, 'Application Form')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/6-.png" alt="" onclick="openModal(this.src, 'Application Letter')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/7-.png" alt="" onclick="openModal(this.src, 'Review & Payment')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/8-.png" alt="" onclick="openModal(this.src, 'Payment')">
+              </div>
+
+              <div class="swiper-slide img-fix-size">
+                <img src="assets/img/portfolio/user/version/9-.png" alt="" onclick="openModal(this.src, 'Review')">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
 
       </div>
-    </section> -->
-    <!-- End of Mobile Final User web application interface Section -->
 
+    </div>
+  </section>
 
-    
-    <!-- ======= Final Admin portal interface design Section ======= -->
-    <section id="portfolio-details" class="portfolio-details" style="margin-top:0vh;">
-      <div class="container" >
-        <div class="gy-4" >
-          <div class="" style="margin: auto;">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/admin-portal/0.png" alt="">
-                </div>
-
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/admin-portal/1.png" alt="">
-                </div>
-
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/admin-portal/2.png" alt="">
-                </div>
-
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/admin-portal/3.png" alt="">
-                </div>
-
-                <div class="swiper-slide img-fix-size">
-                  <img src="assets/img/portfolio/admin-portal/4.png" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="" style="margin: auto;">
-            <div class="portfolio-description">
-              <h2 style="text-align: center">Final Admin portal interface design</h2>
-            </div>
-          </div>
-
-        </div>
-
+ <!-- Modal Structure -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
       </div>
-    </section><!-- End of Final Admin portal interface design Section -->
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="Image" class="img-fluid zoom-img">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript to handle the modal and zoom functionality -->
+<script>
+  function openModal(src, title) {
+    document.getElementById('modalImage').src = src;
+    document.getElementById('imageModalLabel').textContent = title;
+    $('#imageModal').modal('show');
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var modalImage = document.getElementById('modalImage');
+    modalImage.addEventListener('click', function() {
+      if (this.classList.contains('zoomed')) {
+        this.classList.remove('zoomed');
+      } else {
+        this.classList.add('zoomed');
+      }
+    });
+  });
+</script>
 
   </main><!-- End #main -->
 
