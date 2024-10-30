@@ -313,9 +313,9 @@ section {
         transition: 0.3s;
         width: 50%;
 
-        &:hover {
-          background: rgba($primary, .95);
-        }
+        // &:hover {
+        //   background: rgba($primary, .95);
+        // }
       }
 
       a + a {
