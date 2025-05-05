@@ -168,7 +168,11 @@
     if (portfolioContainer) {
       window.portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
+        layoutMode: 'masonry',
+        masonry: {
+          columnWidth: '.portfolio-item',
+          gutter: 0
+        }
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
