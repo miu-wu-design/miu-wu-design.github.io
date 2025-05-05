@@ -260,4 +260,17 @@
    */
   new PureCounter();
 
+  // Handle See All Projects button
+  const seeAllBtn = document.getElementById('seeAllBtn');
+  if (seeAllBtn) {
+    seeAllBtn.addEventListener('click', function() {
+      const hiddenProjects = document.querySelectorAll('.hidden-project');
+      hiddenProjects.forEach(project => {
+        project.style.display = 'block';
+        project.classList.add('animate__animated', 'animate__fadeIn');
+      });
+      seeAllBtn.classList.add('hidden');
+    });
+  }
+
 })()

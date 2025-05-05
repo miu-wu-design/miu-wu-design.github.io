@@ -1135,3 +1135,26 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+.hidden-project {
+  display: none;
+}
+
+#seeAllBtn {
+  background-color: #18d26e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#seeAllBtn:hover {
+  background-color: #15c064;
+  transform: translateY(-2px);
+}
+
+#seeAllBtn.hidden {
+  display: none;
+}
