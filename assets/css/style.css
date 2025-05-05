@@ -282,7 +282,7 @@ h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid #ff9740;
 }
 
 @media (min-width: 1024px) {
@@ -326,7 +326,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #ff9740;
 }
 
 .section-title h2::after {
@@ -350,7 +350,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #173b6c;
+  color: #ff9740;
 }
 
 .about .content ul {
@@ -371,7 +371,7 @@ section {
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: #149ddd;
+  color: #ff9740;
   line-height: 0;
 }
 
@@ -456,7 +456,7 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #dce8f8;
+  background: #ff97405c;
   height: 10px;
 }
 
@@ -464,7 +464,7 @@ section {
   width: 1px;
   height: 10px;
   transition: 0.9s;
-  background-color: #149ddd;
+  background-color: #ff9740;
 }
 
 /*--------------------------------------------------------------
@@ -475,13 +475,13 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #ff9740;
 }
 
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #ff9740;
   position: relative;
 }
 
@@ -497,7 +497,7 @@ section {
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #ff97405c;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -525,7 +525,7 @@ section {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #1f5297;
+  border: 2px solid #ff9740;
 }
 
 /*--------------------------------------------------------------
@@ -1114,7 +1114,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #190a01;
+  background: #ff9740;
 }
 
 #footer .copyright {
