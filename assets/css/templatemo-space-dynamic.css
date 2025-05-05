@@ -147,12 +147,12 @@ body {
 }
 
 ::selection {
-  background: #03a4ed;
+  background: #ff8438;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #03a4ed;
+  background: #ff8438;
   color: #fff;
 }
 
@@ -179,7 +179,7 @@ body {
 .section-heading h2 {
   font-size: 30px;
   text-transform: capitalize;
-  color: #2a2a2a;
+  color: #302721;
   font-weight: 700;
   letter-spacing: 0.25px;
   position: relative;
@@ -189,16 +189,16 @@ body {
 
 .section-heading h2 em {
   font-style: normal;
-  color: #03a4ed;
+  color: #ff8438;
 }
 
 .section-heading h2 span {
-  color: #fe3f40;
+  color: #f9ab7a;
 }
 
 .main-blue-button a {
   display: inline-block;
-  background-color: #03a4ed;
+  background-color: #ff8438;
   font-size: 15px;
   font-weight: 400;
   color: #fff;
@@ -210,7 +210,7 @@ body {
 
 .main-red-button a {
   display: inline-block;
-  background-color: #fe3f40;
+  background-color: #f9ab7a;
   font-size: 15px;
   font-weight: 400;
   color: #fff;
@@ -254,11 +254,11 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #fe3f40!important;
+  color: #f9ab7a!important;
 }
 
 .background-header .nav li a.active {
-  color: #fe3f40!important;
+  color: #f9ab7a!important;
 }
 
 .header-area {
@@ -376,12 +376,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fe3f40!important;
+  color: #f9ab7a!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #fe3f40!important;
+  color: #f9ab7a!important;
   opacity: 1;
 }
 
@@ -588,7 +588,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #fe3f40;
+  color: #f9ab7a;
 }
 
 @media (max-width: 1200px) {
@@ -621,7 +621,7 @@ header
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #fe3f40!important;
+    color: #f9ab7a!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -682,7 +682,7 @@ header
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #fe3f40!important;
+    color: #f9ab7a!important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -796,7 +796,7 @@ preloader
     height: 16px;
     top: 12px;
     left: 15px;
-    background: #fe3f40;
+    background: #f9ab7a;
     border-radius: 50%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -819,7 +819,7 @@ preloader
     width: 16px;
     height: 16px;
     margin-left: 16px;
-    background: #fe3f40;
+    background: #f9ab7a;
     border-radius: 50%;
 }
 
@@ -935,24 +935,24 @@ Banner Style
 .main-banner .left-content h6 {
   text-transform: uppercase;
   font-size: 18px;
-  color: #fe3f40;
+  color: #f9ab7a;
   margin-bottom: 15px;
 }
 
 .main-banner .left-content h2 {
   font-size: 50px;
   font-weight: 700;
-  color: #2a2a2a;
+  color: #302721;
   line-height: 72px;
 }
 
 .main-banner .left-content h2 em {
-  color: #03a4ed;
+  color: #ff8438;
   font-style: normal;
 }
 
 .main-banner .left-content h2 span {
-  color: #fe3f40;
+  color: #f9ab7a;
 }
 
 .main-banner .left-content p {
@@ -974,7 +974,7 @@ Banner Style
   background-color: #fff;
   font-size: 15px;
   font-weight: 500;
-  color: #fe3f40;
+  color: #f9ab7a;
   text-transform: capitalize;
   padding: 12px 25px;
   border-radius: 23px;
@@ -986,7 +986,7 @@ Banner Style
 .main-banner .left-content form input {
   width: 470px;
   height: 66px;
-  background-color: #03a4ed;
+  background-color: #ff8438;
   border-radius: 33px;
   border: none;
   outline: none;
@@ -1113,7 +1113,7 @@ Services Style
   top: 0;
   font-size: 18px;
   font-weight: 600;
-  color: #03a4ed;
+  color: #ff8438;
 }
 
 .our-services .first-bar span {
@@ -1208,8 +1208,8 @@ Portfolio
 }
 
 .our-portfolio .hidden-content {
-  background: rgb(255,77,30);
-  background: linear-gradient(105deg, rgba(255,77,30,1) 0%, rgba(255,44,109,1) 100%);
+  background: rgb(255,132,56);
+  background: linear-gradient(105deg, rgba(255,132,56,1) 0%, rgba(249,171,122,1) 100%);
   padding: 30px;
   border-radius: 20px;
   text-align: center;
@@ -1497,7 +1497,7 @@ form#contact textarea::placeholder {
 
 form#contact button {
   display: inline-block;
-  background-color: #03a4ed;
+  background-color: #ff8438;
   font-size: 15px;
   font-weight: 400;
   color: #fff;
@@ -1511,7 +1511,7 @@ form#contact button {
 }
 
 form#contact button:hover {
-  background-color: #fe3f40;
+  background-color: #f9ab7a;
 }
 
 
@@ -1527,7 +1527,7 @@ footer p {
 }
 
 footer p a {
-  color: #fe3f40;
+  color: #f9ab7a;
 }
 
 /* 
