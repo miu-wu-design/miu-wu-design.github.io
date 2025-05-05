@@ -556,7 +556,7 @@ section {
 }
 .portfolio .portfolio-item {
   margin-bottom: 30px;
-  padding: 0;
+  padding: 15px;
 }
 
 .portfolio #portfolio-flters {
@@ -597,6 +597,8 @@ section {
   overflow: hidden;
   z-index: 1;
   margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio .portfolio-wrap::before {
@@ -616,6 +618,8 @@ section {
   width: 100%;
   height: auto;
   display: block;
+  padding: 0;
+  margin: 0;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -628,6 +632,7 @@ section {
   transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -649,6 +654,15 @@ section {
 
 .portfolio-item {
   padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent spacing for all portfolio items */
+.portfolio-item.filter-app,
+.portfolio-item.filter-web,
+.portfolio-item.filter-video {
+  padding: 15px;
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
