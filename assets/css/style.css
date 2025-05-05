@@ -79,7 +79,7 @@ h6 {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #f9ab7a;
+  background: #f9af80;
   overflow-y: auto;
 }
 
@@ -188,7 +188,7 @@ h6 {
 .nav-menu a:focus i {
   font-size: 24px;
   padding-right: 8px;
-  color: #6f7180;
+  color: #ffb282;
 }
 
 .nav-menu a:hover,
