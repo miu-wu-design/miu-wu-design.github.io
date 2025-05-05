@@ -1141,7 +1141,7 @@ section {
 }
 
 #seeAllBtn {
-  background-color: #18d26e;
+  background-color: #ff9740;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -1151,7 +1151,7 @@ section {
 }
 
 #seeAllBtn:hover {
-  background-color: #15c064;
+  background-color: #ffb97e;
   transform: translateY(-2px);
 }
 
