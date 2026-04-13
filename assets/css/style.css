@@ -67,20 +67,380 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Header
+# Header (Old - Disabled)
 --------------------------------------------------------------*/
 #header {
+  display: none; /* Hide old header */
+}
+
+/*--------------------------------------------------------------
+# New Navigation Styles
+--------------------------------------------------------------*/
+body {
+  font-family: "Inter", sans-serif;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+/* New Header Navigation */
+.new-header {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  width: 300px;
-  transition: all ease-in-out 0.5s;
-  z-index: 9997;
-  transition: all 0.5s;
-  padding: 0 15px;
-  background: #ff9740;
-  overflow-y: auto;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Desktop Navigation Wrapper - Floating Rounded Rectangle */
+@media (min-width: 769px) {
+  .nav-wrapper {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 60px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  }
+  
+  .new-nav {
+    padding: 0;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 32px;
+  }
+  
+  /* Hide logo on desktop */
+  .nav-brand {
+    display: none;
+  }
+  
+  /* Center nav links without logo */
+  .nav-links {
+    flex: 1;
+    justify-content: center;
+    margin-right: auto;
+  }
+  
+  /* Ensure CTA stays on right */
+  .nav-cta {
+    flex-shrink: 0;
+    margin-left: 24px;
+  }
+}
+
+/* Mobile Navigation - Keep original behavior */
+@media (max-width: 768px) {
+  .new-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .new-nav {
+    padding: 0;
+  }
+  
+  .nav-container {
+    padding: 16px 24px;
+  }
+  
+  /* Show logo on mobile */
+  .nav-brand {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-cta {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+/* Logo/Brand */
+.nav-brand {
+  flex-shrink: 0;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.brand-logo {
+  height: 32px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.brand-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+}
+
+.nav-link:hover {
+  color: #000000;
+}
+
+.nav-link.active {
+  color: #000000;
+}
+
+.nav-link.active::after {
+  content: "•";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  font-size: 14px;
+}
+
+/* CTA Button */
+.nav-cta {
+  flex-shrink: 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #000000;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.cta-button:hover {
+  background: #333333;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 24px 24px;
+  gap: 16px;
+}
+
+.mobile-nav-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #000000;
+}
+
+.mobile-nav-link.active {
+  color: #000000;
+  font-weight: 600;
+}
+
+.mobile-nav-link.cta-mobile {
+  background: #000000;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 8px;
+  border: none;
+}
+
+.mobile-nav-link.cta-mobile:hover {
+  background: #333333;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 16px 24px;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .nav-cta {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .brand-text {
+    font-size: 16px;
+  }
+  
+  .brand-logo {
+    height: 28px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 12px 16px;
+  }
+  
+  .brand-text {
+    font-size: 14px;
+  }
+  
+  .brand-logo {
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
+/* Add top padding to body to account for fixed header */
+body {
+  padding-top: 0px;
+}
+
+/* Main content balanced margins */
+main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Ensure even margins for content sections */
+.container {
+  max-width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+  
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
 }
 
 #header .profile img {
@@ -129,7 +489,10 @@ h6 {
 }
 
 #main {
-  margin-left: 300px;
+  max-width: 1200px; 
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 0 20px; 
 }
 
 .container,
@@ -282,7 +645,7 @@ h6 {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #ff9740;
+  border-bottom: 3px solid #ffffff;
 }
 
 @media (min-width: 1024px) {
@@ -1119,15 +1482,17 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   padding: 15px;
   color: #f4f6fd;
   font-size: 14px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  z-index: 9999;
+  text-align: center;
   background: #ff9740;
+  margin-top: auto;
 }
 
 #footer .copyright {

@@ -22,6 +22,81 @@
   }
 
   /**
+   * New Navigation Functionality
+   */
+  const initNewNavigation = () => {
+    const mobileMenuToggle = select('.mobile-menu-toggle');
+    const mobileMenu = select('.mobile-menu');
+    const newHeader = select('.new-header');
+    const mobileNavLinks = select('.mobile-nav-link', true);
+    const navLinks = select('.nav-link', true);
+
+    // Mobile menu toggle
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+      });
+    }
+
+    // Close mobile menu when clicking on links
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Header scroll effect
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        newHeader.classList.add('scrolled');
+      } else {
+        newHeader.classList.remove('scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    // Active link highlighting
+    const updateActiveLink = () => {
+      const sections = select('section[id]', true);
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+
+      mobileNavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink(); // Initial check
+  };
+
+  // Initialize new navigation
+  initNewNavigation();
+
+  /**
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {

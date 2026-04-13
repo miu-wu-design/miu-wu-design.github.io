@@ -14,8 +14,7 @@
   <link href="assets/img/Miu-Design-Logo.png" rel="Miu-Design-Logo">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> <!-- Extra CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -72,53 +71,67 @@
 
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <!-- <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Miu Wu</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  <!-- ======= New Navigation Header ======= -->
+  <header class="new-header">
+    <nav class="new-nav">
+      <div class="nav-container">
+        <!-- Logo/Brand -->
+        <div class="nav-brand">
+          <a href="index.html" class="brand-link">
+            <img src="assets/img/Miu-Design-Logo.png" alt="Miu Wu Design" class="brand-logo">
+            <span class="brand-text">Miu Wu</span>
+          </a>
         </div>
-      </div>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav>
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links">
+          <a href="index.html#hero" class="nav-link">Home</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+          <a href="index.html#skills" class="nav-link">Skills</a>
+          <a href="index.html#resume" class="nav-link">Resume</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="nav-cta">
+          <!-- <a href="#contact" class="cta-button">Contact Me</a> -->
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="mobile-menu-content">
+        <a href="index.html#hero" class="mobile-nav-link">Home</a>
+        <a href="index.html#about" class="mobile-nav-link">About</a>
+        <a href="index.html#portfolio" class="mobile-nav-link">Portfolio</a>
+        <a href="index.html#skills" class="mobile-nav-link">Skills</a>
+        <a href="index.html#resume" class="mobile-nav-link">Resume</a>
+        <!-- <a href="#contact" class="mobile-nav-link cta-mobile">Contact Me</a> -->
+      </div>
     </div>
-  </header> -->
-  <!-- End Header -->
+  </header>
+  <!-- End New Navigation Header -->
 
-  <!-- <main id="main"> -->
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <ol>
-            <li><a href="index.html" style="color:black;">Home</a></li>
-            <li>Portfolio Details</li>
-          </ol>
-          <h2><b> </b></h2>
-        </div>
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <ol>
+          <li><a href="index.html" style="color:black;">Home</a></li>
+          <li>Portfolio Details</li>
+        </ol>
+        <h2><b> </b></h2>
       </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
+  </section><!-- End Breadcrumbs -->
 
     <div class="main-banner main-banner-mobile wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
       <div class="container">
@@ -386,6 +399,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        <!-- &copy; Copyright <strong><span>iPortfolio</span></strong> -->
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
 
 </body>
 
