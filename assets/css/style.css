@@ -1110,6 +1110,10 @@ main {
 }
 
 @media (max-width: 768px) {
+  .skills-main-heading {
+    font-size: 36px !important;
+  }
+  
   .portfolio-main-heading {
     font-size: 36px;
   }
@@ -1154,12 +1158,17 @@ main {
     font-size: 15px;
   }
   
-  .skills-main-heading {
-    font-size: 36px;
-  }
   
   .skills-subheading {
-    font-size: 16px;
+    font-size: 16px !important;
+  }
+  
+  .skills-label {
+    font-size: 12px !important;
+  }
+
+  .portfolio-label {
+    font-size: 12px !important;
   }
   
   /* Mobile visibility classes */
@@ -1189,9 +1198,21 @@ main {
   .portfolio-main-heading {
     font-size: 28px;
   }
-  
+    
+  .skills-main-heading {
+    font-size: 28px !important;
+  }
+
   .portfolio-subheading {
     font-size: 14px;
+  }
+  
+  .skills-subheading {
+    font-size: 14px !important;
+  }
+  
+  .skills-label {
+    font-size: 12px !important;
   }
   
   .portfolio-filter-bar {
@@ -1203,6 +1224,11 @@ main {
     padding: 0 20px;
   }
   
+
+  .portfolio-label {
+    font-size: 12px !important;
+  }
+
   .portfolio-filter-bar::-webkit-scrollbar {
     display: none;
   }
@@ -1230,14 +1256,7 @@ main {
   .project-detail-description {
     font-size: 14px;
   }
-  
-  .skills-main-heading {
-    font-size: 28px;
-  }
-  
-  .skills-subheading {
-    font-size: 14px;
-  }
+
   
   .circular-icon {
     width: 60px;
