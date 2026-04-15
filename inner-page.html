@@ -52,11 +52,30 @@
 
         <!-- Desktop Navigation Links -->
         <div class="nav-links">
-          <a href="index.html#hero" class="nav-link">Home</a>
-          <a href="index.html#about" class="nav-link">About</a>
-          <a href="index.html#portfolio" class="nav-link">Portfolio</a>
-          <a href="index.html#skills" class="nav-link">Skills</a>
-          <a href="index.html#resume" class="nav-link">Resume</a>
+          <a href="index.html#hero" class="nav-link">
+            <span class="nav-link-icon" aria-label="Home">
+              <i class="bi bi-house-door"></i>
+            </span>
+            <span class="nav-link-text">Home</span>
+          </a>
+          <a href="index.html#portfolio" class="nav-link">
+            <span class="nav-link-icon" aria-label="Portfolio">
+              <i class="bi bi-grid-3x3-gap"></i>
+            </span>
+            <span class="nav-link-text">Portfolio</span>
+          </a>
+          <a href="index.html#skills" class="nav-link">
+            <span class="nav-link-icon" aria-label="Skills">
+              <i class="bi bi-stars"></i>
+            </span>
+            <span class="nav-link-text">Skills</span>
+          </a>
+          <a href="index.html#resume" class="nav-link">
+            <span class="nav-link-icon" aria-label="Resume">
+              <i class="bi bi-file-text"></i>
+            </span>
+            <span class="nav-link-text">Resume</span>
+          </a>
         </div>
 
         <!-- CTA Button -->
@@ -136,6 +155,20 @@
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Contact Modal -->
+  <div class="contact-modal-overlay" id="contactModal">
+    <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <i class="bi bi-x"></i>
+      </button>
+      <div class="modal-content">
+        <h2 id="modalTitle">Get in Touch</h2>
+        <p>You can reach me at:</p>
+        <a href="mailto:mimiwu2634@gmail.com" class="modal-email">mimiwu2634@gmail.com</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

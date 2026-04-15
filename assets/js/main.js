@@ -22,6 +22,89 @@
   }
 
   /**
+   * Contact Modal functionality
+   */
+  const contactModal = {
+    overlay: null,
+    modal: null,
+    closeBtn: null,
+    isOpen: false,
+
+    init() {
+      this.overlay = select('#contactModal');
+      this.modal = select('.contact-modal');
+      this.closeBtn = select('.modal-close-btn');
+      
+      if (!this.overlay) return;
+
+      this.bindEvents();
+    },
+
+    bindEvents() {
+      // Open modal when CTA button is clicked
+      const ctaButtons = select('.cta-button, .nav-cta a', true);
+      ctaButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.open();
+        });
+      });
+
+      // Open modal when Contact link is clicked
+      const contactLinks = select('.nav-link[href="#contact"]', true);
+      contactLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.open();
+        });
+      });
+
+      // Close modal when close button is clicked
+      if (this.closeBtn) {
+        this.closeBtn.addEventListener('click', () => this.close());
+      }
+
+      // Close modal when overlay is clicked
+      this.overlay.addEventListener('click', (e) => {
+        if (e.target === this.overlay) {
+          this.close();
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && this.isOpen) {
+          this.close();
+        }
+      });
+    },
+
+    open() {
+      if (!this.overlay) return;
+      
+      this.overlay.classList.add('active');
+      document.body.classList.add('modal-open');
+      this.isOpen = true;
+      
+      // Focus management
+      setTimeout(() => {
+        const closeBtn = select('.modal-close-btn');
+        if (closeBtn) {
+          closeBtn.focus();
+        }
+      }, 100);
+    },
+
+    close() {
+      if (!this.overlay) return;
+      
+      this.overlay.classList.remove('active');
+      document.body.classList.remove('modal-open');
+      this.isOpen = false;
+    }
+  };
+
+  /**
    * New Navigation Functionality
    */
   const initNewNavigation = () => {
@@ -95,6 +178,257 @@
 
   // Initialize new navigation
   initNewNavigation();
+
+  // Initialize contact modal
+  contactModal.init();
+
+  /**
+   * Portfolio Master-Detail System
+   */
+  const portfolioSystem = {
+    projects: {
+      'web-design': [
+        {
+          id: 'web-store',
+          name: 'E-commerce Web Store',
+          description: 'A complete e-commerce platform with modern UI/UX design, featuring product catalog, shopping cart, and checkout functionality. The design emphasizes clean layouts, intuitive navigation, and responsive performance across all devices.',
+          images: [
+            { src: 'assets/img/portfolio/webstore-Mock-1.png', caption: 'Homepage layout with product showcase' },
+            { src: 'assets/img/portfolio/webstore-Mock-2.png', caption: 'Product detail page with specifications' }
+          ]
+        },
+        {
+          id: 'mobile-app',
+          name: 'Mobile Application Design',
+          description: 'Mobile-first application design with focus on user experience and accessibility. Features include intuitive navigation, touch-optimized interfaces, and seamless integration with backend services.',
+          images: [
+            { src: 'assets/img/portfolio/Mobile-Mock-1.png', caption: 'Mobile app home screen' },
+            { src: 'assets/img/portfolio/Mobile-Mock-2.png', caption: 'User profile and settings interface' }
+          ]
+        },
+        {
+          id: 'ai-app',
+          name: 'AI-Based Application',
+          description: 'Innovative AI-powered application with sophisticated user interface design. The project combines cutting-edge technology with user-centered design principles to deliver an intuitive and powerful user experience.',
+          images: [
+            { src: 'assets/img/portfolio/WD-Mock-1.png', caption: 'AI dashboard with analytics' },
+            { src: 'assets/img/portfolio/WD-Mock-2.png', caption: 'User interaction flow design' }
+          ]
+        },
+        {
+          id: '3d-store',
+          name: '3D Animation Web Store',
+          description: 'Interactive web store featuring 3D product animations and immersive shopping experience. Combines advanced web technologies with creative design to showcase products in an engaging way.',
+          images: [
+            { src: 'assets/img/portfolio/3D-Mock-1.png', caption: '3D product showcase' },
+            { src: 'assets/img/portfolio/3D-Mock-2.png', caption: 'Interactive product viewer' }
+          ]
+        },
+        {
+          id: 'pp-app',
+          name: 'Professional Platform',
+          description: 'Professional networking platform with modern design and comprehensive user management features. Focuses on clean interfaces, efficient workflows, and excellent user experience.',
+          images: [
+            { src: 'assets/img/portfolio/PP-Mock-1.png', caption: 'Platform dashboard design' },
+            { src: 'assets/img/portfolio/PP-Mock-2.png', caption: 'User collaboration interface' }
+          ]
+        }
+      ],
+      'graphic-design': [
+        {
+          id: 'easter-banners',
+          name: 'Easter Campaign Banners',
+          description: 'Seasonal marketing campaign featuring multiple banner designs for various clients. Each banner maintains brand consistency while incorporating Easter themes and modern design elements.',
+          images: [
+            { src: 'assets/img/portfolio/graphic-1.png', caption: 'Easter banner for HiveRadar' },
+            { src: 'assets/img/portfolio/graphic-2.png', caption: 'Easter banner for Securicore' }
+          ]
+        },
+        {
+          id: 'brand-identity',
+          name: 'Brand Identity Design',
+          description: 'Complete brand identity package including logo design, color schemes, and marketing materials. Focus on creating cohesive visual language that communicates brand values effectively.',
+          images: [
+            { src: 'assets/img/portfolio/graphic-3.png', caption: 'Brand logo variations' },
+            { src: 'assets/img/portfolio/graphic-4.png', caption: 'Marketing collateral design' }
+          ]
+        },
+        {
+          id: 'magazine-design',
+          name: 'Magazine Layout Design',
+          description: 'Editorial design for print and digital magazines. Features sophisticated typography, thoughtful layout composition, and engaging visual hierarchy to enhance reader experience.',
+          images: [
+            { src: 'assets/img/portfolio/graphic-m-1.png', caption: 'Magazine cover design' },
+            { src: 'assets/img/portfolio/graphic-m-2.png', caption: 'Interior spread layout' }
+          ]
+        },
+        {
+          id: 'poster-design',
+          name: 'Event Poster Design',
+          description: 'Promotional poster designs for various events and campaigns. Each poster combines striking visuals with clear messaging to capture audience attention and drive engagement.',
+          images: [
+            { src: 'assets/img/portfolio/graphic-p-1.png', caption: 'Christmas & New Year poster' },
+            { src: 'assets/img/portfolio/graphic-p-2.png', caption: 'Chinatown Night Market poster' }
+          ]
+        },
+        {
+          id: 'user-guides',
+          name: 'Technical User Guides',
+          description: 'Comprehensive user guide design for technical products. Features clear instructions, intuitive diagrams, and professional layout to enhance user understanding and product usability.',
+          images: [
+            { src: 'assets/img/portfolio/Repair-Kit-User-Guide.png', caption: 'Repair kit user manual' },
+            { src: 'assets/img/portfolio/Flashlight-User-Guide.png', caption: 'Product operation guide' }
+          ]
+        }
+      ],
+      'animation-video': [
+        {
+          id: 'product-ads',
+          name: 'Product Advertising Videos',
+          description: 'Professional product advertising videos with 3D animations and motion graphics. Each video showcases product features through engaging visual storytelling and high-quality production.',
+          images: [
+            { src: 'assets/img/portfolio/video1.png', caption: 'Product advertising video thumbnail' },
+            { src: 'assets/img/portfolio/animation/Access-Point.png', caption: '3D animation product showcase' }
+          ]
+        },
+        {
+          id: 'social-media-gifs',
+          name: 'Social Media Animations',
+          description: 'Animated content for social media marketing including GIFs and short videos. Designed to capture attention quickly and communicate messages effectively in digital spaces.',
+          images: [
+            { src: 'assets/img/portfolio/gif/Thanksgiving-post.gif', caption: 'Thanksgiving social media GIF' },
+            { src: 'assets/img/portfolio/gif/National-Internet-Day.gif', caption: 'National Internet Day animation' }
+          ]
+        },
+        {
+          id: '3d-animations',
+          name: '3D Product Animations',
+          description: 'Advanced 3D animations showcasing product features and functionality. Combines technical precision with creative presentation to highlight product value propositions.',
+          images: [
+            { src: 'assets/img/portfolio/animation/video2.png', caption: '3D animation product advertising' },
+            { src: 'assets/img/portfolio/gif/360-Camera-mount.gif', caption: '360-degree product demonstration' }
+          ]
+        }
+      ]
+    },
+    
+    currentCategory: 'web-design',
+    currentProject: null,
+    
+    init() {
+      this.bindEvents();
+      this.renderProjects();
+      this.selectProject('web-store');
+    },
+    
+    bindEvents() {
+      // Filter button clicks
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const category = e.target.dataset.category;
+          this.setActiveFilter(category);
+          this.renderProjects();
+          
+          // Select first project in new category
+          const projects = this.projects[category];
+          if (projects.length > 0) {
+            this.selectProject(projects[0].id);
+          }
+        });
+      });
+    },
+    
+    setActiveFilter(category) {
+      this.currentCategory = category;
+      
+      // Update button states
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.category === category) {
+          btn.classList.add('active');
+        }
+      });
+    },
+    
+    renderProjects() {
+      const projectList = document.getElementById('projectList');
+      const projects = this.projects[this.currentCategory];
+      
+      projectList.innerHTML = '';
+      
+      projects.forEach(project => {
+        const projectItem = document.createElement('div');
+        projectItem.className = 'project-item';
+        projectItem.dataset.projectId = project.id;
+        
+        projectItem.innerHTML = `
+          <div class="project-name">${project.name}</div>
+          <div class="project-category">${this.getCategoryLabel(this.currentCategory)}</div>
+        `;
+        
+        projectItem.addEventListener('click', () => {
+          this.selectProject(project.id);
+        });
+        
+        projectList.appendChild(projectItem);
+      });
+    },
+    
+    selectProject(projectId) {
+      const projects = this.projects[this.currentCategory];
+      const project = projects.find(p => p.id === projectId);
+      
+      if (!project) return;
+      
+      this.currentProject = project;
+      
+      // Update active state in list
+      document.querySelectorAll('.project-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.dataset.projectId === projectId) {
+          item.classList.add('active');
+        }
+      });
+      
+      // Render project details
+      this.renderProjectDetails(project);
+    },
+    
+    renderProjectDetails(project) {
+      const projectDetail = document.getElementById('projectDetail');
+      
+      let imagesHtml = '';
+      project.images.forEach(image => {
+        imagesHtml += `
+          <img src="${image.src}" alt="${image.caption}" class="project-detail-image">
+          <p class="project-detail-caption">${image.caption}</p>
+        `;
+      });
+      
+      projectDetail.innerHTML = `
+        <h3 class="project-detail-title">${project.name}</h3>
+        <p class="project-detail-description">${project.description}</p>
+        ${imagesHtml}
+      `;
+      
+      // Trigger animation
+      setTimeout(() => {
+        projectDetail.classList.add('show');
+      }, 50);
+    },
+    
+    getCategoryLabel(category) {
+      const labels = {
+        'web-design': 'Web Design',
+        'graphic-design': 'Graphic Design',
+        'animation-video': 'Animation & Video'
+      };
+      return labels[category] || category;
+    }
+  };
+  
+  // Initialize portfolio system
+  portfolioSystem.init();
 
   /**
    * Easy event listener function
