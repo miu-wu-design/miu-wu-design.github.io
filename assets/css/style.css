@@ -212,7 +212,7 @@ body {
     top: 16px;
     left: 16px;
     right: 16px;
-    border-radius: 40px;
+    border-radius: 60px;
   }
   
   .nav-container {
@@ -277,7 +277,7 @@ body {
     margin: 0 auto;
     width: 80%;
     background-color: #ffffff;
-    border-radius: 16px;
+    border-radius: 40px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
   
