@@ -191,6 +191,7 @@
         {
           id: 'web-store',
           name: 'E-commerce Web Store',
+          icon: 'bi-shop',
           description: 'A complete e-commerce platform with modern UI/UX design, featuring product catalog, shopping cart, and checkout functionality. The design emphasizes clean layouts, intuitive navigation, and responsive performance across all devices.',
           images: [
             { src: 'assets/img/portfolio/webstore-Mock-1.png', caption: 'Homepage layout with product showcase' },
@@ -200,6 +201,7 @@
         {
           id: 'mobile-app',
           name: 'Mobile Application Design',
+          icon: 'bi-phone',
           description: 'Mobile-first application design with focus on user experience and accessibility. Features include intuitive navigation, touch-optimized interfaces, and seamless integration with backend services.',
           images: [
             { src: 'assets/img/portfolio/Mobile-Mock-1.png', caption: 'Mobile app home screen' },
@@ -209,6 +211,7 @@
         {
           id: 'ai-app',
           name: 'AI-Based Application',
+          icon: 'bi-cpu',
           description: 'Innovative AI-powered application with sophisticated user interface design. The project combines cutting-edge technology with user-centered design principles to deliver an intuitive and powerful user experience.',
           images: [
             { src: 'assets/img/portfolio/WD-Mock-1.png', caption: 'AI dashboard with analytics' },
@@ -218,6 +221,7 @@
         {
           id: '3d-store',
           name: '3D Animation Web Store',
+          icon: 'bi-box',
           description: 'Interactive web store featuring 3D product animations and immersive shopping experience. Combines advanced web technologies with creative design to showcase products in an engaging way.',
           images: [
             { src: 'assets/img/portfolio/3D-Mock-1.png', caption: '3D product showcase' },
@@ -227,6 +231,7 @@
         {
           id: 'pp-app',
           name: 'Professional Platform',
+          icon: 'bi-people',
           description: 'Professional networking platform with modern design and comprehensive user management features. Focuses on clean interfaces, efficient workflows, and excellent user experience.',
           images: [
             { src: 'assets/img/portfolio/PP-Mock-1.png', caption: 'Platform dashboard design' },
@@ -238,6 +243,7 @@
         {
           id: 'easter-banners',
           name: 'Easter Campaign Banners',
+          icon: 'bi-palette',
           description: 'Seasonal marketing campaign featuring multiple banner designs for various clients. Each banner maintains brand consistency while incorporating Easter themes and modern design elements.',
           images: [
             { src: 'assets/img/portfolio/graphic-1.png', caption: 'Easter banner for HiveRadar' },
@@ -247,6 +253,7 @@
         {
           id: 'brand-identity',
           name: 'Brand Identity Design',
+          icon: 'bi-badge',
           description: 'Complete brand identity package including logo design, color schemes, and marketing materials. Focus on creating cohesive visual language that communicates brand values effectively.',
           images: [
             { src: 'assets/img/portfolio/graphic-3.png', caption: 'Brand logo variations' },
@@ -256,6 +263,7 @@
         {
           id: 'magazine-design',
           name: 'Magazine Layout Design',
+          icon: 'bi-book',
           description: 'Editorial design for print and digital magazines. Features sophisticated typography, thoughtful layout composition, and engaging visual hierarchy to enhance reader experience.',
           images: [
             { src: 'assets/img/portfolio/graphic-m-1.png', caption: 'Magazine cover design' },
@@ -265,6 +273,7 @@
         {
           id: 'poster-design',
           name: 'Event Poster Design',
+          icon: 'bi-image',
           description: 'Promotional poster designs for various events and campaigns. Each poster combines striking visuals with clear messaging to capture audience attention and drive engagement.',
           images: [
             { src: 'assets/img/portfolio/graphic-p-1.png', caption: 'Christmas & New Year poster' },
@@ -274,6 +283,7 @@
         {
           id: 'user-guides',
           name: 'Technical User Guides',
+          icon: 'bi-file-text',
           description: 'Comprehensive user guide design for technical products. Features clear instructions, intuitive diagrams, and professional layout to enhance user understanding and product usability.',
           images: [
             { src: 'assets/img/portfolio/Repair-Kit-User-Guide.png', caption: 'Repair kit user manual' },
@@ -285,6 +295,7 @@
         {
           id: 'product-ads',
           name: 'Product Advertising Videos',
+          icon: 'bi-camera-video',
           description: 'Professional product advertising videos with 3D animations and motion graphics. Each video showcases product features through engaging visual storytelling and high-quality production.',
           images: [
             { src: 'assets/img/portfolio/video1.png', caption: 'Product advertising video thumbnail' },
@@ -294,6 +305,7 @@
         {
           id: 'social-media-gifs',
           name: 'Social Media Animations',
+          icon: 'bi-gif',
           description: 'Animated content for social media marketing including GIFs and short videos. Designed to capture attention quickly and communicate messages effectively in digital spaces.',
           images: [
             { src: 'assets/img/portfolio/gif/Thanksgiving-post.gif', caption: 'Thanksgiving social media GIF' },
@@ -303,6 +315,7 @@
         {
           id: '3d-animations',
           name: '3D Product Animations',
+          icon: 'bi-play-circle',
           description: 'Advanced 3D animations showcasing product features and functionality. Combines technical precision with creative presentation to highlight product value propositions.',
           images: [
             { src: 'assets/img/portfolio/animation/video2.png', caption: '3D animation product advertising' },
@@ -352,8 +365,10 @@
     
     renderProjects() {
       const projectList = document.getElementById('projectList');
+      const circularIconsContainer = document.getElementById('circularIconsContainer');
       const projects = this.projects[this.currentCategory];
       
+      // Render desktop project list
       projectList.innerHTML = '';
       
       projects.forEach(project => {
@@ -372,6 +387,25 @@
         
         projectList.appendChild(projectItem);
       });
+      
+      // Render mobile circular icons
+      circularIconsContainer.innerHTML = '';
+      
+      projects.forEach(project => {
+        const circularIcon = document.createElement('div');
+        circularIcon.className = 'circular-icon';
+        circularIcon.dataset.projectId = project.id;
+        
+        circularIcon.innerHTML = `
+          <i class="bi ${project.icon}"></i>
+        `;
+        
+        circularIcon.addEventListener('click', () => {
+          this.selectProject(project.id);
+        });
+        
+        circularIconsContainer.appendChild(circularIcon);
+      });
     },
     
     selectProject(projectId) {
@@ -382,11 +416,19 @@
       
       this.currentProject = project;
       
-      // Update active state in list
+      // Update active state in desktop list
       document.querySelectorAll('.project-item').forEach(item => {
         item.classList.remove('active');
         if (item.dataset.projectId === projectId) {
           item.classList.add('active');
+        }
+      });
+      
+      // Update active state in mobile circular icons
+      document.querySelectorAll('.circular-icon').forEach(icon => {
+        icon.classList.remove('active');
+        if (icon.dataset.projectId === projectId) {
+          icon.classList.add('active');
         }
       });
       

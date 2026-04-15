@@ -177,10 +177,17 @@
 
         <!-- Two-Column Master-Detail Layout -->
         <div class="portfolio-content">
-          <!-- Left Column - Project List -->
-          <div class="portfolio-list-column">
+          <!-- Left Column - Project List (Desktop) -->
+          <div class="portfolio-list-column desktop-only">
             <div class="project-list" id="projectList">
               <!-- Projects will be dynamically inserted here -->
+            </div>
+          </div>
+
+          <!-- Mobile Circular Icon Selector -->
+          <div class="portfolio-circular-selector mobile-only">
+            <div class="circular-icons-container" id="circularIconsContainer">
+              <!-- Circular icons will be dynamically inserted here -->
             </div>
           </div>
 
@@ -199,8 +206,11 @@
     <section id="skills" class="skills section-bg">
       <div class="container">
 
-        <div class="section-title">
-          <h2>Skills</h2>
+        <!-- Skills Title Area -->
+        <div class="skills-title-block">
+          <div class="skills-label">My Skills</div>
+          <h2 class="skills-main-heading">Skills</h2>
+          <p class="skills-subheading">A mix of design, UX, and front-end skills I use to create clean, user-friendly digital experiences.</p>
         </div>
 
         <div class="row skills-content">
