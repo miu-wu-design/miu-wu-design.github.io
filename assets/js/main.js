@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -34,7 +34,7 @@
       this.overlay = select('#contactModal');
       this.modal = select('.contact-modal');
       this.closeBtn = select('.modal-close-btn');
-      
+
       if (!this.overlay) return;
 
       this.bindEvents();
@@ -81,11 +81,11 @@
 
     open() {
       if (!this.overlay) return;
-      
+
       this.overlay.classList.add('active');
       document.body.classList.add('modal-open');
       this.isOpen = true;
-      
+
       // Focus management
       setTimeout(() => {
         const closeBtn = select('.modal-close-btn');
@@ -97,7 +97,7 @@
 
     close() {
       if (!this.overlay) return;
-      
+
       this.overlay.classList.remove('active');
       document.body.classList.remove('modal-open');
       this.isOpen = false;
@@ -189,13 +189,43 @@
     projects: {
       'web-design': [
         {
-          id: 'web-store',
-          name: 'E-commerce Web Store',
-          icon: 'bi-shop',
-          description: 'A complete e-commerce platform with modern UI/UX design, featuring product catalog, shopping cart, and checkout functionality. The design emphasizes clean layouts, intuitive navigation, and responsive performance across all devices.',
+          id: 'ai-web',
+          name: 'Marketing & product website for AI SaaS',
+          icon: 'bi-cpu',
+          description: 'Designed and built a bilingual (Traditional Chinese & English) marketing site in Framer for Chat Everywhere v2.',
+          heroImage: 'assets/img/portfolio/CE-Mock-1.jpg',
           images: [
-            { src: 'assets/img/portfolio/webstore-Mock-1.png', caption: 'Homepage layout with product showcase' },
-            { src: 'assets/img/portfolio/webstore-Mock-2.png', caption: 'Product detail page with specifications' }
+            { src: 'assets/img/portfolio/ce/ce-home.jpg', caption: 'Homepage page of ChatEverywhere' },
+            { src: 'assets/img/portfolio/ce/ce-teacher.jpg', caption: 'Teacher feature page of ChatEverywhere' },
+            { src: 'assets/img/portfolio/ce/ce-organization.jpg', caption: 'Pricing page of ChatEverywhere' }
+          ]
+        },
+        {
+          id: '3d-store',
+          name: '3D Animation Web Store',
+          icon: 'bi-shop',
+          description: 'Interactive web store featuring 3D product animations and immersive shopping experience. Combines advanced web technologies with creative design to showcase products in an engaging way.',
+          heroImage: 'assets/img/portfolio/3D-Mock-1.png',
+          images: [
+            { src: 'assets/img/portfolio/animation/home.jpg', caption: 'Interactive 3D animation store page' },
+            { src: 'assets/img/portfolio/animation/Store-3D-open.mp4', caption: 'Interactive 3D animation - Interior Showcase' },
+            { src: 'assets/img/portfolio/animation/Store-3D-handle.mp4', caption: 'Interactive 3D animation - Handle Showcase' },
+            { src: 'assets/img/portfolio/animation/Store-3D-FullyExtend.mp4', caption: 'Interactive 3D animation - Fully Extend Shocase' }
+          ]
+        },
+        {
+          id: 'pp-app',
+          name: 'Professional Platform',
+          icon: 'bi-briefcase',
+          description: 'Professional networking platform with modern design and comprehensive user management features. Focuses on clean interfaces, efficient workflows, and excellent user experience.',
+          heroImage: 'assets/img/portfolio/PP-Mock-1.png',
+          images: [
+            { src: 'assets/img/portfolio/pp/dashboard.jpg', caption: 'Platform Dashboard Page' },
+            { src: 'assets/img/portfolio/pp/location.jpg', caption: 'Location Page' },
+            { src: 'assets/img/portfolio/pp/project-Information.jpg', caption: 'Pojcet Information Page' },
+            { src: 'assets/img/portfolio/pp/schedule-calendar.jpg', caption: 'Schedule Calendar Page' },
+            { src: 'assets/img/portfolio/pp/administration.jpg', caption: 'Administration Page' },
+            { src: 'assets/img/portfolio/pp/notification.jpg', caption: 'Notification Page' }
           ]
         },
         {
@@ -203,58 +233,46 @@
           name: 'Mobile Application Design',
           icon: 'bi-phone',
           description: 'Mobile-first application design with focus on user experience and accessibility. Features include intuitive navigation, touch-optimized interfaces, and seamless integration with backend services.',
+          heroImage: 'assets/img/portfolio/Mobile-Mock-1.png',
           images: [
-            { src: 'assets/img/portfolio/Mobile-Mock-1.png', caption: 'Mobile app home screen' },
-            { src: 'assets/img/portfolio/Mobile-Mock-2.png', caption: 'User profile and settings interface' }
+            { src: 'assets/img/portfolio/mobile/home.jpg', caption: 'Mobile website home screen' },
+            { src: 'assets/img/portfolio/mobile/product.jpg', caption: 'Mobile website product page' },
+            { src: 'assets/img/portfolio/mobile/store.jpg', caption: 'Mobile website store page' }
+
           ]
         },
         {
           id: 'ai-app',
           name: 'AI-Based Application',
-          icon: 'bi-cpu',
+          icon: 'bi-globe',
           description: 'Innovative AI-powered application with sophisticated user interface design. The project combines cutting-edge technology with user-centered design principles to deliver an intuitive and powerful user experience.',
+          heroImage: 'assets/img/portfolio/WD-Mock-1.png',
           images: [
-            { src: 'assets/img/portfolio/WD-Mock-1.png', caption: 'AI dashboard with analytics' },
-            { src: 'assets/img/portfolio/WD-Mock-2.png', caption: 'User interaction flow design' }
-          ]
-        },
-        {
-          id: '3d-store',
-          name: '3D Animation Web Store',
-          icon: 'bi-box',
-          description: 'Interactive web store featuring 3D product animations and immersive shopping experience. Combines advanced web technologies with creative design to showcase products in an engaging way.',
-          images: [
-            { src: 'assets/img/portfolio/3D-Mock-1.png', caption: '3D product showcase' },
-            { src: 'assets/img/portfolio/3D-Mock-2.png', caption: 'Interactive product viewer' }
-          ]
-        },
-        {
-          id: 'pp-app',
-          name: 'Professional Platform',
-          icon: 'bi-people',
-          description: 'Professional networking platform with modern design and comprehensive user management features. Focuses on clean interfaces, efficient workflows, and excellent user experience.',
-          images: [
-            { src: 'assets/img/portfolio/PP-Mock-1.png', caption: 'Platform dashboard design' },
-            { src: 'assets/img/portfolio/PP-Mock-2.png', caption: 'User collaboration interface' }
+            { src: 'assets/img/portfolio/user/sign-up.jpg', caption: 'User Application Dashboard Page' },
+            { src: 'assets/img/portfolio/user/Application-dashboard.jpg', caption: 'User Application Dashboard Page' },
+            { src: 'assets/img/portfolio/user/application.jpg', caption: 'User Application Page' },
+            { src: 'assets/img/portfolio/user/support.jpg', caption: 'User Support Page' },
+            { src: 'assets/img/portfolio/user/admin-user-application.jpg', caption: 'Admin View Client Application Page' },
+            { src: 'assets/img/portfolio/user/admin-user-management.jpg', caption: 'Admin Client Management Page' }
           ]
         }
       ],
       'graphic-design': [
         {
-          id: 'easter-banners',
-          name: 'Easter Campaign Banners',
+          id: 'brand-identity-CE',
+          name: 'Brand Identity Social Media Posts - ChatEverywhere',
           icon: 'bi-palette',
-          description: 'Seasonal marketing campaign featuring multiple banner designs for various clients. Each banner maintains brand consistency while incorporating Easter themes and modern design elements.',
+          description: 'Use consistent colors, fonts, and images to ensure fast cross-platform recognition.',
           images: [
             { src: 'assets/img/portfolio/graphic-1.png', caption: 'Easter banner for HiveRadar' },
             { src: 'assets/img/portfolio/graphic-2.png', caption: 'Easter banner for Securicore' }
           ]
         },
         {
-          id: 'brand-identity',
-          name: 'Brand Identity Design',
+          id: 'brand-identity-HR',
+          name: 'Brand Identity Social Media Posts - HiveRadar',
           icon: 'bi-badge',
-          description: 'Complete brand identity package including logo design, color schemes, and marketing materials. Focus on creating cohesive visual language that communicates brand values effectively.',
+          description: 'Use consistent colors, fonts, and images to ensure fast cross-platform recognition.',
           images: [
             { src: 'assets/img/portfolio/graphic-3.png', caption: 'Brand logo variations' },
             { src: 'assets/img/portfolio/graphic-4.png', caption: 'Marketing collateral design' }
@@ -324,16 +342,16 @@
         }
       ]
     },
-    
+
     currentCategory: 'web-design',
     currentProject: null,
-    
+
     init() {
       this.bindEvents();
       this.renderProjects();
-      this.selectProject('web-store');
+      this.selectProject('ai-web');
     },
-    
+
     bindEvents() {
       // Filter button clicks
       document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -341,7 +359,7 @@
           const category = e.target.dataset.category;
           this.setActiveFilter(category);
           this.renderProjects();
-          
+
           // Select first project in new category
           const projects = this.projects[category];
           if (projects.length > 0) {
@@ -350,10 +368,10 @@
         });
       });
     },
-    
+
     setActiveFilter(category) {
       this.currentCategory = category;
-      
+
       // Update button states
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -361,61 +379,67 @@
           btn.classList.add('active');
         }
       });
+
+      // Update portfolio section data attribute for CSS targeting
+      const portfolioSection = document.querySelector('.portfolio');
+      if (portfolioSection) {
+        portfolioSection.setAttribute('data-active-category', category);
+      }
     },
-    
+
     renderProjects() {
       const projectList = document.getElementById('projectList');
       const circularIconsContainer = document.getElementById('circularIconsContainer');
       const projects = this.projects[this.currentCategory];
-      
+
       // Render desktop project list
       projectList.innerHTML = '';
-      
+
       projects.forEach(project => {
         const projectItem = document.createElement('div');
         projectItem.className = 'project-item';
         projectItem.dataset.projectId = project.id;
-        
+
         projectItem.innerHTML = `
           <div class="project-name">${project.name}</div>
           <div class="project-category">${this.getCategoryLabel(this.currentCategory)}</div>
         `;
-        
+
         projectItem.addEventListener('click', () => {
           this.selectProject(project.id);
         });
-        
+
         projectList.appendChild(projectItem);
       });
-      
+
       // Render mobile circular icons
       circularIconsContainer.innerHTML = '';
-      
+
       projects.forEach(project => {
         const circularIcon = document.createElement('div');
         circularIcon.className = 'circular-icon';
         circularIcon.dataset.projectId = project.id;
-        
+
         circularIcon.innerHTML = `
           <i class="bi ${project.icon}"></i>
         `;
-        
+
         circularIcon.addEventListener('click', () => {
           this.selectProject(project.id);
         });
-        
+
         circularIconsContainer.appendChild(circularIcon);
       });
     },
-    
+
     selectProject(projectId) {
       const projects = this.projects[this.currentCategory];
       const project = projects.find(p => p.id === projectId);
-      
+
       if (!project) return;
-      
+
       this.currentProject = project;
-      
+
       // Update active state in desktop list
       document.querySelectorAll('.project-item').forEach(item => {
         item.classList.remove('active');
@@ -423,7 +447,7 @@
           item.classList.add('active');
         }
       });
-      
+
       // Update active state in mobile circular icons
       document.querySelectorAll('.circular-icon').forEach(icon => {
         icon.classList.remove('active');
@@ -431,34 +455,516 @@
           icon.classList.add('active');
         }
       });
-      
+
       // Render project details
       this.renderProjectDetails(project);
     },
-    
+
     renderProjectDetails(project) {
       const projectDetail = document.getElementById('projectDetail');
-      
-      let imagesHtml = '';
-      project.images.forEach(image => {
-        imagesHtml += `
-          <img src="${image.src}" alt="${image.caption}" class="project-detail-image">
-          <p class="project-detail-caption">${image.caption}</p>
+
+      // Check if this is a Web Design project
+      const isWebDesign = this.currentCategory === 'web-design';
+
+      if (isWebDesign) {
+        projectDetail.innerHTML = this.renderWebDesignCaseStudy(project);
+      } else {
+        // Keep original layout for other categories
+        let imagesHtml = '';
+        project.images.forEach(image => {
+          imagesHtml += `
+            <p class="project-detail-caption">${image.caption}</p>
+            <img src="${image.src}" alt="${image.caption}" class="project-detail-image">
+          `;
+        });
+
+        projectDetail.innerHTML = `
+          <h3 class="project-detail-title">${project.name}</h3>
+          <p class="project-detail-description">${project.description}</p>
+          ${imagesHtml}
         `;
-      });
-      
-      projectDetail.innerHTML = `
-        <h3 class="project-detail-title">${project.name}</h3>
-        <p class="project-detail-description">${project.description}</p>
-        ${imagesHtml}
-      `;
-      
+      }
+
       // Trigger animation
       setTimeout(() => {
         projectDetail.classList.add('show');
       }, 50);
     },
-    
+
+    renderWebDesignCaseStudy(project) {
+      // Get project-specific case study data
+      const caseStudyData = this.getWebDesignCaseStudyData(project.id);
+
+      // Generate final designs gallery with support for images and videos
+      let finalDesignsHtml = '';
+      project.images.forEach(image => {
+        // Check if this is a video file
+        const isVideo = image.src.endsWith('.mp4') || image.src.endsWith('.webm') || image.src.endsWith('.ogg');
+
+        if (isVideo) {
+          finalDesignsHtml += `
+            <div class="design-item video-item">
+              <p class="project-detail-caption">${image.caption}</p>
+              <video controls class="project-detail-video" poster="${image.src.replace(/\.(mp4|webm|ogg)$/, '.jpg')}">
+                <source src="${image.src}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          `;
+        } else {
+          finalDesignsHtml += `
+            <div class="design-item">
+              <p class="project-detail-caption">${image.caption}</p>
+              <div class="image-frame">
+                <img src="${image.src}" alt="${image.caption}" class="project-detail-image">
+              </div>
+            </div>
+          `;
+        }
+      });
+
+      return `
+        <!-- Hero Section -->
+        <div class="case-study-hero">
+          <h3 class="project-detail-title">${caseStudyData.hero.title}</h3>
+          <div class="hero-image">
+            <img src="${project.heroImage || project.images[0]?.src || 'assets/img/portfolio/placeholder-hero.png'}" alt="${caseStudyData.hero.title} - Hero Image" class="hero-detail-image">
+          </div>
+          <div class="hero-meta">
+            <div class="meta-row">
+              <span class="meta-label">Project Type:</span>
+              <span class="meta-value">${caseStudyData.hero.type}</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Client:</span>
+              <span class="meta-value">${caseStudyData.hero.client}</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">My Role:</span>
+              <span class="meta-value">${caseStudyData.hero.role}</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Year & Duration:</span>
+              <span class="meta-value">${caseStudyData.hero.year}</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Tools & Tech:</span>
+              <span class="meta-value">${caseStudyData.hero.tools}</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Overview:</span>
+              <span class="meta-value">${caseStudyData.overview.description}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Final Designs Section -->
+        <div class="case-study-section">
+          <!-- <h4 class="section-title">Final Designs</h4> -->
+          <div class="final-designs-gallery">
+            ${finalDesignsHtml}
+          </div>
+        </div>
+        
+        <!-- Overview Section -->
+        <!-- <div class="case-study-section">
+          <h4 class="section-title">Overview</h4>
+          <p class="section-description">${caseStudyData.overview.description}</p>
+          <div class="goals-list">
+            <h5>Business Goal</h5>
+            <ul>
+              ${caseStudyData.overview.businessGoal.map(goal => `<li>${goal}</li>`).join('')}
+            </ul>
+            <h5>Objectives & Success Metrics</h5>
+            <ul>
+              ${caseStudyData.overview.objectives.map(obj => `<li>${obj}</li>`).join('')}
+            </ul>
+          </div>
+        </div> -->
+        
+        <!-- Process Section -->
+        <!-- <div class="case-study-section">
+          <h4 class="section-title">Process</h4>
+          
+          <div class="process-subsection">
+            <h5>Research & Discovery</h5>
+            <ul>
+              ${caseStudyData.process.research.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+          
+          <div class="process-subsection">
+            <h5>Information Architecture & Wireframes</h5>
+            <ul>
+              ${caseStudyData.process.wireframes.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+          
+          <div class="process-subsection">
+            <h5>Visual Design & System</h5>
+            <ul>
+              ${caseStudyData.process.visualDesign.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+          
+          <div class="process-subsection">
+            <h5>Prototyping & Testing</h5>
+            <ul>
+              ${caseStudyData.process.prototyping.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+          
+          <div class="process-subsection">
+            <h5>Implementation / Handoff</h5>
+            <ul>
+              ${caseStudyData.process.implementation.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+          </div>
+        </div> --> 
+        
+        <!-- Results & Impact Section -->
+        <div class="case-study-section">
+          <h4 class="section-title">Results & Impact</h4>
+          <ul class="results-list">
+            ${caseStudyData.results.map(result => `<li>${result}</li>`).join('')}
+          </ul>
+        </div>
+        
+        <!-- My Role Section -->
+        <div class="case-study-section">
+          <h4 class="section-title">My Role</h4>
+          <ul class="role-list">
+            ${caseStudyData.myRole.map(role => `<li>${role}</li>`).join('')}
+          </ul>
+        </div>
+        
+        <!-- Challenges & Learnings Section -->
+        <!-- <div class="case-study-section">
+          <h4 class="section-title">Challenges & Learnings</h4>
+          <ul class="learnings-list">
+            ${caseStudyData.learnings.map(learning => `<li>${learning}</li>`).join('')}
+          </ul>
+        </div> -->
+      `;
+    },
+
+    getWebDesignCaseStudyData(projectId) {
+      const caseStudies = {
+        'ai-web': {
+          hero: {
+            title: 'Marketing & Product Website for AI Application',
+            type: 'AI Web Application Design',
+            client: 'Chat Everywhere',
+            role: 'Lead Web Designer',
+            year: '2025 - 2026',
+            tools: 'Figma, Adobe Photoshop, Adobe Illustrator, Framer, basic HTML/CSS components within Framer'
+          },
+          overview: {
+            description: 'Designed and built a bilingual (Traditional Chinese & English) marketing site in Framer for Chat Everywhere v2, showcasing its AI tools for education, organizations, and individuals.',
+            businessGoal: ['Enhance the shopping experience and increase engagement and sales.'],
+            objectives: [
+              'Increase conversion rate on the main product pages by 25%',
+              'Make the checkout process 3 steps instead of 7 to reduce cart abandonment',
+              'Improve mobile usability for ~60% mobile traffic',
+              'Implement advanced filtering and search functionality'
+            ]
+          },
+          myRole: [
+            'Planned information architecture and section flow (hero, features, portals, metrics, pricing, changelog, etc.) to support conversions.',
+            'Designed and implemented the full site in Framer, including responsive layouts, interactions, and component reuse.',
+            'Crafted and localized key marketing copy for both English and Traditional Chinese versions to keep tone consistent and persuasive.'
+          ],
+          process: {
+            research: [
+              'Reviewed existing analytics and interviewed 8 key stakeholders',
+              'Analyzed competitor e-commerce platforms and industry best practices',
+              'Created user personas based on customer data and interviews'
+            ],
+            wireframes: [
+              'Mapped user flows for product discovery, selection, and checkout',
+              'Created low-fidelity wireframes for core pages (homepage, product pages, cart, checkout)',
+              'Designed responsive layouts for mobile, tablet, and desktop views'
+            ],
+            visualDesign: [
+              'Developed a clean, modern UI kit with reusable components',
+              'Established typography hierarchy and color system aligned with brand',
+              'Created detailed design specifications for all interactive elements'
+            ],
+            prototyping: [
+              'Built interactive Figma prototypes for key user journeys',
+              'Conducted usability testing with 12 target users',
+              'Iterated on designs based on feedback and testing results'
+            ],
+            implementation: [
+              'Prepared developer-ready design specs and style guides',
+              'Collaborated during front-end implementation and QA testing',
+              'Ensured design consistency across all pages and components'
+            ]
+          },
+          results: [
+            'Communicated complex multi-portal product (worker, teacher, organization) with clear, scannable sections and visuals.',
+            'Increased clarity of value proposition for education and business users by structuring features and metrics (users, visits, time saved).',
+            'Delivered a fast, responsive, and fully bilingual landing experience that supports both global and Traditional Chinese–speaking audiences.'
+          ],
+          learnings: [
+            'Learned to balance complex e-commerce functionality with clean, intuitive design',
+            'Discovered the importance of progressive disclosure in product filtering options',
+            'Improved remote collaboration through detailed design documentation and regular check-ins'
+          ]
+        },
+        'mobile-app': {
+          hero: {
+            title: 'Mobile Website Design',
+            type: 'Mobile Application Design',
+            client: 'Hiveradar Inc.',
+            role: 'Lead UI/UX Designer',
+            year: '2024 - 2 months',
+            tools: 'Figma, Adobe Photoshop, Adobe Illustrator, monday.com'
+          },
+          overview: {
+            description: 'Designed a mobile-optimized version of an existing IT company desktop site, focusing on responsive layouts, clear content hierarchy, and performance. Responsibilities included wireframing, UX flows, visual design, and device testing to deliver a smooth mobile experience.',
+            businessGoal: ['Create a mobile-first experience that increases user engagement'],
+            objectives: [
+              'Design an intuitive navigation system that requires no learning curve',
+              'Ensure key tasks can be completed in under 30 seconds',
+              'Achieve 4.5+ star rating in app stores',
+              'Support both iOS and Android platforms with consistent experience'
+            ]
+          },
+          myRole: [
+            'Led end-to-end mobile UX and UI, from research and wireframes to final high-fidelity designs.',
+            'Optimized content and interaction patterns for one-handed use and small screens.',
+            'Collaborated with developers to ensure performant implementation and performed cross-device testing to refine the experience.'
+          ],
+          process: {
+            research: [
+              'Conducted contextual interviews with 15 target users',
+              'Analyzed top 5 competitor mobile apps in the category',
+              'Created user journey maps for key mobile use cases'
+            ],
+            wireframes: [
+              'Designed user flows optimized for thumb navigation and mobile patterns',
+              'Created wireframes for all major app screens and interactions',
+              'Established information architecture for mobile-first experience'
+            ],
+            visualDesign: [
+              'Developed mobile-specific UI components and interaction patterns',
+              'Created color system optimized for mobile screens and accessibility',
+              'Designed custom iconography and illustration style'
+            ],
+            prototyping: [
+              'Built high-fidelity interactive prototypes in Figma',
+              'Conducted usability testing with 8 participants using mobile devices',
+              'Tested gesture interactions and micro-animations'
+            ],
+            implementation: [
+              'Prepared detailed mobile design specifications and guidelines',
+              'Created component library for iOS and Android development',
+              'Collaborated with developers on native implementation challenges'
+            ]
+          },
+          results: [
+            'Translated complex desktop features into an intuitive, mobile-friendly interface.',
+            'Improved mobile engagement and reduced bounce rates through better usability and faster load times.',
+            'Delivered a consistent brand and feature experience across devices, strengthening the company’s mobile presence.'
+          ],
+          learnings: [
+            'Learned importance of designing for thumb-friendly interaction zones',
+            'Discovered that micro-animations significantly improve user engagement',
+            'Improved cross-platform design consistency through systematic component libraries'
+          ]
+        },
+        'ai-app': {
+          hero: {
+            title: 'AI-Based Application Design',
+            type: 'AI-Powered Application',
+            client: 'Immigantion Agency Company',
+            role: 'Lead Web & UI/UX Designer',
+            year: '2024 - 4 months',
+            tools: 'Figma, Adobe Photoshop, Adobe Illustrator, Basecamp'
+          },
+          overview: {
+            description: 'AI-powered Canadian visa application assistant that auto-fills required forms and generates a tailored checklist of supporting documents. Includes an admin portal so staff can review, support, and complete user applications efficiently.',
+            businessGoal: ['Democratize AI analytics for business users without technical expertise'],
+            objectives: [
+              'Reduce learning curve for AI features to under 30 minutes',
+              'Increase user adoption of advanced AI features by 40%',
+              'Create intuitive data visualization for complex AI insights',
+              'Ensure the interface can handle real-time AI processing feedback'
+            ]
+          },
+          myRole: [
+            'Led end-to-end UX from user research and competitor analysis through to high-fidelity UI design.',
+            'Designed responsive user and admin portals, ensuring seamless integration with AI-driven backend workflows.',
+            'Collaborated closely with engineers to align interface behavior with data extraction and form auto-fill logic.'
+          ],
+          process: {
+            research: [
+              'Interviewed 20 business users about their understanding of AI concepts',
+              'Analyzed existing analytics platforms and AI interfaces',
+              'Created mental models for how users expect to interact with AI'
+            ],
+            wireframes: [
+              'Designed dashboard layouts that balance simplicity with powerful features',
+              'Created wireframes for AI configuration and result interpretation screens',
+              'Mapped user flows for AI-powered workflows and decision-making'
+            ],
+            visualDesign: [
+              'Developed visualization system for complex AI data and insights',
+              'Created iconography and visual language for AI concepts',
+              'Designed responsive layouts for various screen sizes and devices'
+            ],
+            prototyping: [
+              'Built interactive prototypes demonstrating AI feature interactions',
+              'Tested data visualization comprehension with target users',
+              'Validated AI workflow designs with business stakeholders'
+            ],
+            implementation: [
+              'Created detailed specifications for data visualization components',
+              'Collaborated with front-end developers on AI interface implementation',
+              'Ensured accessibility compliance for complex data displays'
+            ]
+          },
+          results: [
+            'Streamlined a complex visa application journey into a guided, AI-assisted web experience.',
+            'Improved user confidence and clarity by generating clear, personalized document checklists.',
+            'Delivered a cohesive multi-device experience (admin + user portals across desktop, tablet, and mobile).'
+          ],
+          learnings: [
+            'Learned to balance technical complexity with user-friendly interfaces',
+            'Discovered importance of progressive disclosure for AI features',
+            'Improved understanding of how to visualize abstract AI concepts intuitively'
+          ]
+        },
+        '3d-store': {
+          hero: {
+            title: 'Interactive 3D Animation Webstore Design',
+            type: '3D E-commerce Platform',
+            client: 'Hiveradar Inc.',
+            role: 'Lead 3D Animator & Web Experience Designer',
+            year: '2024 - 5 months',
+            tools: 'Figma, Adobe Photoshop, Adobe Illustrator, Blender'
+          },
+          overview: {
+            description: 'Developed interactive 3D product animations for a web store to clearly showcase product features and functionality from multiple angles.',
+            businessGoal: ['Create an engaging, user-friendly visual aid that supports more confident purchase decisions.'],
+            objectives: [
+              'Implement 3D product viewers that load in under 3 seconds',
+              'Increase average time on product pages by 60%',
+              'Reduce product returns by 25% through better visualization',
+              'Maintain accessibility for users who can\'t use 3D features'
+            ]
+          },
+          myRole: [
+            'Led the full 3D animation pipeline, from concept to final rendering and web integration.',
+            'Collaborated with the software engineer to ensure smooth, performant interactive behavior on the website.',
+            'Incorporated stakeholder and senior feedback throughout iterations to refine clarity, pacing, and user experience.'
+          ],
+          process: {
+            research: [
+              'Researched 3D e-commerce trends and user expectations',
+              'Analyzed performance implications of 3D features',
+              'Tested user comprehension of 3D controls and interactions'
+            ],
+            wireframes: [
+              'Designed layouts that accommodate both 3D and traditional product views',
+              'Created wireframes for 3D viewer controls and interaction patterns',
+              'Planned responsive behavior for 3D features across devices'
+            ],
+            visualDesign: [
+              'Designed UI controls for 3D manipulation (zoom, rotate, etc.)',
+              'Created visual hierarchy that balances 3D and 2D elements',
+              'Developed loading states and performance indicators for 3D content'
+            ],
+            prototyping: [
+              'Built interactive prototypes with simulated 3D interactions',
+              'Tested user understanding of 3D navigation and controls',
+              'Validated performance expectations and loading behaviors'
+            ],
+            implementation: [
+              'Created detailed specifications for 3D viewer UI components',
+              'Collaborated with Three.js developers on integration',
+              'Ensured fallback experiences for users without 3D support'
+            ]
+          },
+          results: [
+            'Delivered three optimized, web-ready 3D animations that improved product understanding.',
+            'Enhanced user engagement by allowing shoppers to explore product details interactively.',
+            'Supported higher purchase confidence, contributing to stronger product presentation and sales potential.'
+          ],
+          learnings: [
+            'Learned to balance immersive 3D features with practical e-commerce needs',
+            'Discovered importance of performance optimization for 3D content',
+            'Improved understanding of accessibility in immersive web experiences'
+          ]
+        },
+        'pp-app': {
+          hero: {
+            title: 'Project Management Web Application',
+            type: 'Professional Management Platform',
+            client: 'Securicore',
+            role: 'Lead Web & UI/UX Designer',
+            year: '2024 - 6 months',
+            tools: 'Figma, Adobe Photoshop, Adobe Illustrator, monday.com'
+          },
+          overview: {
+            description: 'Designed a project planning and network management web application that helps admins and engineers securely store and share building-related documents and notes from anywhere. The app centralizes tasks, resources, and live AP data to simplify building internet management and improve operational efficiency.',
+            businessGoal: ['Create engaging professional networking platform that drives user growth'],
+            objectives: [
+              'Achieve 100,000 active users within first 6 months',
+              'Increase user engagement to 3+ sessions per week',
+              'Reduce profile completion time to under 10 minutes',
+              'Implement AI-powered career recommendations'
+            ]
+          },
+          myRole: [
+            'Led UX and UI design from research and user flows through to high-fidelity screens.',
+            'Collaborated closely with engineers to align interface behavior with real-time data, notifications, and image uploads.',
+            'Designed user-friendly layouts that balance technical network details with clear, accessible visuals for both admins and engineers.'
+          ],
+          process: {
+            research: [
+              'Conducted market research on professional networking platforms',
+              'Interviewed 25 professionals about networking pain points',
+              'Created competitive analysis matrix of existing platforms'
+            ],
+            wireframes: [
+              'Designed user flows for profile creation, networking, and career features',
+              'Created wireframes for all major platform screens and interactions',
+              'Planned information architecture for complex social features'
+            ],
+            visualDesign: [
+              'Developed professional yet approachable visual identity',
+              'Created comprehensive design system with 50+ components',
+              'Designed responsive layouts for web and mobile platforms'
+            ],
+            prototyping: [
+              'Built interactive prototypes for key networking workflows',
+              'Tested onboarding flow with 20 target users',
+              'Validated AI recommendation feature designs'
+            ],
+            implementation: [
+              'Created detailed design specifications and component documentation',
+              'Collaborated with engineering team on implementation',
+              'Conducted design QA and iteration based on user feedback'
+            ]
+          },
+          results: [
+            'Streamlined document, note, and task management into a single intuitive interface for admins and engineers.',
+            'Enabled live monitoring of AP/network status to quickly detect issues and reduce potential downtime.',
+            'Improved team coordination by clarifying responsibilities, task progress, and shared context across locations.'
+          ],
+          learnings: [
+            'Learned importance of balancing professional tone with engaging user experience',
+            'Discovered key drivers of user engagement in professional networking',
+            'Improved skills in designing complex social interaction systems'
+          ]
+        }
+      };
+
+      return caseStudies[projectId] || caseStudies['ai-web']; // Fallback to ai-web
+    },
+
     getCategoryLabel(category) {
       const labels = {
         'web-design': 'Web Design',
@@ -468,7 +974,7 @@
       return labels[category] || category;
     }
   };
-  
+
   // Initialize portfolio system
   portfolioSystem.init();
 
@@ -543,7 +1049,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('body').classList.toggle('mobile-nav-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -552,7 +1058,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -602,7 +1108,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -628,9 +1134,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -638,7 +1144,7 @@
         window.portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        window.portfolioIsotope.on('arrangeComplete', function() {
+        window.portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -718,19 +1224,19 @@
   // Handle See All Projects button
   const seeAllBtn = document.getElementById('seeAllBtn');
   if (seeAllBtn) {
-    seeAllBtn.addEventListener('click', function() {
+    seeAllBtn.addEventListener('click', function () {
       const hiddenProjects = document.querySelectorAll('.hidden-project');
       hiddenProjects.forEach(project => {
         project.style.display = 'block';
         project.classList.add('animate__animated', 'animate__fadeIn');
       });
-      
+
       // Update Isotope layout
       if (window.portfolioIsotope) {
         window.portfolioIsotope.arrange();
         window.portfolioIsotope.layout();
       }
-      
+
       seeAllBtn.classList.add('hidden');
     });
   }
