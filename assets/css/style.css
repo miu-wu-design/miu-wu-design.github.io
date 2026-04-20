@@ -105,7 +105,7 @@ body {
     left: 24px;
     right: 24px;
     margin: 0 auto;
-    width: 60%;
+    /* width: 60%; */
     max-width: 1200px;
     background-color: #ffffff;
     border-radius: 60px;
@@ -134,7 +134,7 @@ body {
     justify-content: center;
     margin-right: auto;
     display: flex;
-    gap: 8vw;
+    gap: 0vw;
   }
   
   /* Ensure CTA stays on right */
@@ -154,7 +154,7 @@ body {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    padding: 8px;
+    padding: 3px 8px;
     border-radius: 6px;
     transition: color 0.3s ease;
     position: relative;
@@ -210,7 +210,7 @@ body {
 /* Tablet Navigation */
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav-wrapper {
-    width: 60%;
+    /* width: 60%; */
     top: 16px;
     left: 16px;
     right: 16px;
@@ -277,7 +277,7 @@ body {
     left: 12px;
     right: 12px;
     margin: 0 auto;
-    width: 80%;
+    /* width: 80%; */
     background-color: #ffffff;
     border-radius: 40px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -303,7 +303,7 @@ body {
   /* Show nav links on mobile */
   .nav-links {
     display: flex;
-    gap: 12px;
+    gap: 0px;
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -340,17 +340,17 @@ body {
   }
   
   .nav-link.active {
-    background: #3f457417;
+    background: #1a1a1a;
     color: #3f4574;
   }
   
   /* Active state for tablet and mobile navigation icons */
   @media (max-width: 991px) {
     .nav-link.active .nav-link-icon {
-      background: #000;
+      /* background: #000; */
       color: #fff;
-      width: 40px;
-      height: 40px;
+      /* width: 40px;
+      height: 40px; */
       border-radius: 4px;
       display: flex;
       align-items: center;
@@ -362,13 +362,13 @@ body {
   /* Responsive gaps for mobile navigation */
   @media (max-width: 480px) {
     .nav-links {
-      gap: 8px;
+      gap: 0px;
     }
   }
   
   @media (max-width: 380px) {
     .nav-links {
-      gap: 6px;
+      gap: 0px;
     }
   }
   
@@ -564,7 +564,7 @@ body.modal-open {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  padding: 8px;
+  padding: 3px 8px;
   border-radius: 6px;
   position: relative;
   transition: color 0.3s ease;

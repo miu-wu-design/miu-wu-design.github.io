@@ -210,7 +210,7 @@
             { src: 'assets/img/portfolio/animation/home.jpg', caption: 'Interactive 3D animation store page' },
             { src: 'assets/img/portfolio/animation/Store-3D-open.mp4', caption: 'Interactive 3D animation - Interior Showcase' },
             { src: 'assets/img/portfolio/animation/Store-3D-handle.mp4', caption: 'Interactive 3D animation - Handle Showcase' },
-            { src: 'assets/img/portfolio/animation/Store-3D-FullyExtend.mp4', caption: 'Interactive 3D animation - Fully Extend Shocase' }
+            { src: 'assets/img/portfolio/animation/Store-3D-FullyExtend.mp4', caption: 'Interactive 3D animation - Fully Extend Showcase' }
           ]
         },
         {
@@ -222,7 +222,7 @@
           images: [
             { src: 'assets/img/portfolio/pp/dashboard.jpg', caption: 'Platform Dashboard Page' },
             { src: 'assets/img/portfolio/pp/location.jpg', caption: 'Location Page' },
-            { src: 'assets/img/portfolio/pp/project-Information.jpg', caption: 'Pojcet Information Page' },
+            { src: 'assets/img/portfolio/pp/project-Information.jpg', caption: 'Project Information Page' },
             { src: 'assets/img/portfolio/pp/schedule-calendar.jpg', caption: 'Schedule Calendar Page' },
             { src: 'assets/img/portfolio/pp/administration.jpg', caption: 'Administration Page' },
             { src: 'assets/img/portfolio/pp/notification.jpg', caption: 'Notification Page' }
@@ -263,6 +263,7 @@
           name: 'Brand Identity Social Media Posts - ChatEverywhere',
           icon: 'bi-palette',
           description: 'Use consistent colors, fonts, and images to ensure fast cross-platform recognition.',
+          heroImage: 'assets/img/portfolio/graphic-1.png',
           images: [
             { src: 'assets/img/portfolio/graphic-1.png', caption: 'Easter banner for HiveRadar' },
             { src: 'assets/img/portfolio/graphic-2.png', caption: 'Easter banner for Securicore' }
@@ -273,6 +274,7 @@
           name: 'Brand Identity Social Media Posts - HiveRadar',
           icon: 'bi-badge',
           description: 'Use consistent colors, fonts, and images to ensure fast cross-platform recognition.',
+          heroImage: 'assets/img/portfolio/graphic-3.png',
           images: [
             { src: 'assets/img/portfolio/graphic-3.png', caption: 'Brand logo variations' },
             { src: 'assets/img/portfolio/graphic-4.png', caption: 'Marketing collateral design' }
@@ -283,6 +285,7 @@
           name: 'Magazine Layout Design',
           icon: 'bi-book',
           description: 'Editorial design for print and digital magazines. Features sophisticated typography, thoughtful layout composition, and engaging visual hierarchy to enhance reader experience.',
+          heroImage: 'assets/img/portfolio/graphic-m-1.png',
           images: [
             { src: 'assets/img/portfolio/graphic-m-1.png', caption: 'Magazine cover design' },
             { src: 'assets/img/portfolio/graphic-m-2.png', caption: 'Interior spread layout' }
@@ -293,6 +296,7 @@
           name: 'Event Poster Design',
           icon: 'bi-image',
           description: 'Promotional poster designs for various events and campaigns. Each poster combines striking visuals with clear messaging to capture audience attention and drive engagement.',
+          heroImage: 'assets/img/portfolio/graphic-p-1.png',
           images: [
             { src: 'assets/img/portfolio/graphic-p-1.png', caption: 'Christmas & New Year poster' },
             { src: 'assets/img/portfolio/graphic-p-2.png', caption: 'Chinatown Night Market poster' }
@@ -303,6 +307,7 @@
           name: 'Technical User Guides',
           icon: 'bi-file-text',
           description: 'Comprehensive user guide design for technical products. Features clear instructions, intuitive diagrams, and professional layout to enhance user understanding and product usability.',
+          heroImage: 'assets/img/portfolio/Repair-Kit-User-Guide.png',
           images: [
             { src: 'assets/img/portfolio/Repair-Kit-User-Guide.png', caption: 'Repair kit user manual' },
             { src: 'assets/img/portfolio/Flashlight-User-Guide.png', caption: 'Product operation guide' }
