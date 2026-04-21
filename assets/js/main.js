@@ -343,7 +343,7 @@
             { src: 'assets/img/portfolio/video/video1.mp4', caption: 'Product advertising video' },
             { src: 'assets/img/portfolio/video/video2.mp4', caption: 'Product showcase video' },
             { src: 'assets/img/portfolio/video/3.mp4', caption: 'Product detail showcase video' },
-            { src: 'assets/img/portfolio/video/4.mp4', caption: 'Product detail showcase video' }
+            { src: 'assets/img/portfolio/video/4.gif', caption: 'Product detail showcase video' }
           ]
         },
         {
