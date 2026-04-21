@@ -260,24 +260,37 @@
       'graphic-design': [
         {
           id: 'brand-identity-CE',
-          name: 'Brand Identity Social Media Posts - ChatEverywhere',
+          name: 'Brand Identity Graphic - ChatEverywhere',
           icon: 'bi-palette',
           description: 'Use consistent colors, fonts, and images to ensure fast cross-platform recognition.',
           heroImage: 'assets/img/portfolio/graphic-1.png',
           images: [
-            { src: 'assets/img/portfolio/graphic-1.png', caption: 'Easter banner for HiveRadar' },
-            { src: 'assets/img/portfolio/graphic-2.png', caption: 'Easter banner for Securicore' }
+            { src: 'assets/img/portfolio/ce-sm/9.jpg', caption: '學校部署方案' },
+            { src: 'assets/img/portfolio/ce-sm/8.jpg', caption: 'Line小助手' },
+            { src: 'assets/img/portfolio/ce-sm/6.jpg', caption: '檔案上傳支援大升級' },
+            { src: 'assets/img/portfolio/ce-sm/4.jpg', caption: '口歸初心' },
+            { src: 'assets/img/portfolio/ce-sm/1.jpg', caption: 'ECF 工具箱' },
+            { src: 'assets/img/portfolio/ce-sm/2.jpg', caption: '語音對話' },
+            { src: 'assets/img/portfolio/ce-sm/3.jpg', caption: 'AI課堂 提前安排課程' },
+            { src: 'assets/img/portfolio/ce-sm/5.jpg', caption: '會議小幫手 手機APP' },
+            { src: 'assets/img/portfolio/ce-sm/7.jpg', caption: 'CE Bot' }
           ]
         },
         {
           id: 'brand-identity-HR',
-          name: 'Brand Identity Social Media Posts - HiveRadar',
-          icon: 'bi-badge',
+          name: 'Brand Identity Graphic - HiveRadar',
+          icon: 'bi-palette2',
           description: 'Use consistent colors, fonts, and images to ensure fast cross-platform recognition.',
           heroImage: 'assets/img/portfolio/graphic-3.png',
           images: [
-            { src: 'assets/img/portfolio/graphic-3.png', caption: 'Brand logo variations' },
-            { src: 'assets/img/portfolio/graphic-4.png', caption: 'Marketing collateral design' }
+            { src: 'assets/img/portfolio/hiveradar/6.jpeg', caption: 'HALLOWEEN - 3' },
+            { src: 'assets/img/portfolio/hiveradar/7.jpeg', caption: 'MASLOW HIERARCHY IN MODERN TIMES' },
+            { src: 'assets/img/portfolio/hiveradar/8.jpeg', caption: 'CYBERSECURITY' },
+            { src: 'assets/img/portfolio/hiveradar/1.png', caption: 'EASTER - 1' },
+            { src: 'assets/img/portfolio/hiveradar/2.png', caption: 'EASTER - 2' },
+            { src: 'assets/img/portfolio/hiveradar/3.png', caption: 'EASTER - 3' },
+            { src: 'assets/img/portfolio/hiveradar/4.png', caption: 'HALLOWEEN - 1' },
+            { src: 'assets/img/portfolio/hiveradar/5.png', caption: 'HALLOWEEN - 2' }
           ]
         },
         {
@@ -287,21 +300,25 @@
           description: 'Editorial design for print and digital magazines. Features sophisticated typography, thoughtful layout composition, and engaging visual hierarchy to enhance reader experience.',
           heroImage: 'assets/img/portfolio/graphic-m-1.png',
           images: [
-            { src: 'assets/img/portfolio/graphic-m-1.png', caption: 'Magazine cover design' },
-            { src: 'assets/img/portfolio/graphic-m-2.png', caption: 'Interior spread layout' }
+            { src: 'assets/img/portfolio/magazine/1.png', caption: 'MAGAZINE DESIGN' },
+            { src: 'assets/img/portfolio/magazine/2.png', caption: ' ' },
+            { src: 'assets/img/portfolio/magazine/3.png', caption: ' ' },
+            { src: 'assets/img/portfolio/magazine/4.png', caption: ' ' },
+            { src: 'assets/img/portfolio/magazine/5.png', caption: ' ' },
+            { src: 'assets/img/portfolio/magazine/6.png', caption: ' ' }
           ]
         },
-        {
-          id: 'poster-design',
-          name: 'Event Poster Design',
-          icon: 'bi-image',
-          description: 'Promotional poster designs for various events and campaigns. Each poster combines striking visuals with clear messaging to capture audience attention and drive engagement.',
-          heroImage: 'assets/img/portfolio/graphic-p-1.png',
-          images: [
-            { src: 'assets/img/portfolio/graphic-p-1.png', caption: 'Christmas & New Year poster' },
-            { src: 'assets/img/portfolio/graphic-p-2.png', caption: 'Chinatown Night Market poster' }
-          ]
-        },
+        // {
+        //   id: 'poster-design',
+        //   name: 'Event Poster Design',
+        //   icon: 'bi-image',
+        //   description: 'Promotional poster designs for various events and campaigns. Each poster combines striking visuals with clear messaging to capture audience attention and drive engagement.',
+        //   heroImage: 'assets/img/portfolio/graphic-p-1.png',
+        //   images: [
+        //     { src: 'assets/img/portfolio/graphic-p-1.png', caption: 'Christmas & New Year poster' },
+        //     { src: 'assets/img/portfolio/graphic-p-2.png', caption: 'Chinatown Night Market poster' }
+        //   ]
+        // },
         {
           id: 'user-guides',
           name: 'Technical User Guides',
@@ -309,8 +326,10 @@
           description: 'Comprehensive user guide design for technical products. Features clear instructions, intuitive diagrams, and professional layout to enhance user understanding and product usability.',
           heroImage: 'assets/img/portfolio/Repair-Kit-User-Guide.png',
           images: [
-            { src: 'assets/img/portfolio/Repair-Kit-User-Guide.png', caption: 'Repair kit user manual' },
-            { src: 'assets/img/portfolio/Flashlight-User-Guide.png', caption: 'Product operation guide' }
+            { src: 'assets/img/portfolio/tug/1.png', caption: 'HiveRadar Rapid Deployment Kit' },
+            { src: 'assets/img/portfolio/tug/2.png', caption: 'LASER DISTANCE MEASURE & LED FLASHLIGHT - USER GUIDE' },
+            { src: 'assets/img/portfolio/tug/3.png', caption: 'MAGNETIC POLE ADAPTOR & GUY WIRE - USER GUIDE' },
+            { src: 'assets/img/portfolio/tug/4.png', caption: 'REPAIR KIT - USER GUIDE' }
           ]
         }
       ],
@@ -321,8 +340,10 @@
           icon: 'bi-camera-video',
           description: 'Professional product advertising videos with 3D animations and motion graphics. Each video showcases product features through engaging visual storytelling and high-quality production.',
           images: [
-            { src: 'assets/img/portfolio/video1.png', caption: 'Product advertising video thumbnail' },
-            { src: 'assets/img/portfolio/animation/Access-Point.png', caption: '3D animation product showcase' }
+            { src: 'assets/img/portfolio/video/video1.mp4', caption: 'Product advertising video' },
+            { src: 'assets/img/portfolio/video/video2.mp4', caption: 'Product showcase video' },
+            { src: 'assets/img/portfolio/video/3.mp4', caption: 'Product detail showcase video' },
+            { src: 'assets/img/portfolio/video/4.mp4', caption: 'Product detail showcase video' }
           ]
         },
         {
@@ -335,16 +356,16 @@
             { src: 'assets/img/portfolio/gif/National-Internet-Day.gif', caption: 'National Internet Day animation' }
           ]
         },
-        {
-          id: '3d-animations',
-          name: '3D Product Animations',
-          icon: 'bi-play-circle',
-          description: 'Advanced 3D animations showcasing product features and functionality. Combines technical precision with creative presentation to highlight product value propositions.',
-          images: [
-            { src: 'assets/img/portfolio/animation/video2.png', caption: '3D animation product advertising' },
-            { src: 'assets/img/portfolio/gif/360-Camera-mount.gif', caption: '360-degree product demonstration' }
-          ]
-        }
+        // {
+        //   id: '3d-animations',
+        //   name: '3D Product Animations',
+        //   icon: 'bi-play-circle',
+        //   description: 'Advanced 3D animations showcasing product features and functionality. Combines technical precision with creative presentation to highlight product value propositions.',
+        //   images: [
+        //     { src: 'assets/img/portfolio/animation/video2.png', caption: '3D animation product advertising' },
+        //     { src: 'assets/img/portfolio/gif/360-Camera-mount.gif', caption: '360-degree product demonstration' }
+        //   ]
+        // }
       ]
     },
 
@@ -477,10 +498,23 @@
         // Keep original layout for other categories
         let imagesHtml = '';
         project.images.forEach(image => {
-          imagesHtml += `
-            <p class="project-detail-caption">${image.caption}</p>
-            <img src="${image.src}" alt="${image.caption}" class="project-detail-image">
-          `;
+          // Check if this is a video file
+          const isVideo = image.src.endsWith('.mp4') || image.src.endsWith('.webm') || image.src.endsWith('.ogg');
+          
+          if (isVideo) {
+            imagesHtml += `
+              <p class="project-detail-caption">${image.caption}</p>
+              <video controls class="project-detail-video" style="width: 100%; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                <source src="${image.src}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            `;
+          } else {
+            imagesHtml += `
+              <p class="project-detail-caption">${image.caption}</p>
+              <img src="${image.src}" alt="${image.caption}" class="project-detail-image">
+            `;
+          }
         });
 
         projectDetail.innerHTML = `
